@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo7.HelloController">
+   <children>
+      <CheckBox fx:id="checkBoxId" layoutX="49.0" layoutY="48.0" mnemonicParsing="false" onAction="#checkBoxEvent" prefHeight="32.0" prefWidth="104.0" text="ON/OF" />
+      <ChoiceBox fx:id="comboID" layoutX="49.0" layoutY="225.0" prefWidth="150.0" />
+      <RadioButton fx:id="pizzaId" layoutX="49.0" layoutY="95.0" mnemonicParsing="false" onAction="#radioButtonEvent" text="pizza">
+         <toggleGroup>
+            <ToggleGroup fx:id="food1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sushiId" layoutX="166.0" layoutY="95.0" mnemonicParsing="false" onAction="#radioButtonEvent" text="sushi" toggleGroup="$food1" />
+      <ColorPicker fx:id="colorPickerID" layoutX="49.0" layoutY="138.0" onAction="#colorPickerEvent" />
+      <DatePicker fx:id="datePickerID" layoutX="37.0" layoutY="179.0" onAction="#datePickerEvent" />
+      <Label fx:id="checkBoxLabel" layoutX="138.0" layoutY="55.0" prefHeight="18.0" prefWidth="104.0" text="what" />
+      <Label fx:id="radioButtonLabel" layoutX="250.0" layoutY="94.0" prefHeight="18.0" prefWidth="88.0" text="what" />
+      <Label fx:id="dateLabel" layoutX="231.0" layoutY="182.0" prefHeight="18.0" prefWidth="88.0" text="date" />
+      <Label fx:id="comboLabel" layoutX="212.0" layoutY="228.0" prefHeight="18.0" prefWidth="125.0" text="Label" />
+      <Slider fx:id="sliderId" layoutX="480.0" layoutY="48.0" orientation="VERTICAL" prefHeight="262.0" prefWidth="14.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+      <Label fx:id="sliderLabel" layoutX="531.0" layoutY="72.0" prefHeight="18.0" prefWidth="49.0" text="Label" />
+      <ProgressBar fx:id="progresBarID" layoutX="312.0" layoutY="142.0" prefWidth="200.0" progress="0.0" rotate="270.0" />
+      <Button fx:id="progresButton" layoutX="392.0" layoutY="269.0" mnemonicParsing="false" onAction="#increaseBar" text="Artır" />
+      <Spinner fx:id="mySpinner" layoutX="50.0" layoutY="269.0" />
+      <Label fx:id="spinnerLabel" layoutX="227.0" layoutY="273.0" text="Label" />
+      <ListView fx:id="myListView" layoutX="49.0" layoutY="310.0" prefHeight="141.0" prefWidth="200.0" />
+      <Label fx:id="listViewLabel" layoutX="261.0" layoutY="320.0" prefHeight="18.0" prefWidth="49.0" text="Label" />
+      <MenuBar layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="saveMenu" mnemonicParsing="false" onAction="#saveMenuBar" text="Save" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
